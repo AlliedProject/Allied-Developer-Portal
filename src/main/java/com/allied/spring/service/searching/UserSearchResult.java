@@ -13,12 +13,14 @@ import com.allied.spring.web.dto.UserDto;
 public class UserSearchResult {
     private Page<UserDto> userPage;
     private boolean numberFormatException;
-	public UserSearchResult(Page<UserDto> userDtoPage, boolean b) {
-		// TODO Auto-generated constructor stub
-	}
-	public UserSearchResult() {
-		// TODO Auto-generated constructor stub
-	}
+
+	/*
+	 * public UserSearchResult(Page<UserDto> userDtoPage, boolean b) { // TODO
+	 * Auto-generated constructor stub }
+	 */
+	/*
+	 * public UserSearchResult() { // TODO Auto-generated constructor stub }
+	 */
 	public Page<UserDto> getUserPage() {
 		return userPage;
 	}

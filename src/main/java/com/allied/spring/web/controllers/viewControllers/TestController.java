@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/")
 public class TestController {
+	
+	@GetMapping(value = { "/", "/test" })
+	public String test() {
+		return "website/test";
+	}
 
 	@GetMapping(value = { "/", "/sideMenu" })
 	public String sideMenu() {
