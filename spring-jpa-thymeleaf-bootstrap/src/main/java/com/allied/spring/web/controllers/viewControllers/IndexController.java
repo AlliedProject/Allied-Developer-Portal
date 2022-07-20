@@ -13,10 +13,19 @@ import com.allied.spring.web.dto.UserDto;
  */
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/")
 public class IndexController {
-
-    @GetMapping(value = {"/", "/index"})
+	
+	  @GetMapping
+	  public String indexTo() {
+		  System.out.println("hitting default controller-------------------");
+		  return "website/index";
+		  
+	  }
+	 
+	  
+	
+    @GetMapping(value="/index")
     public String index (){
         return "website/index";
     }

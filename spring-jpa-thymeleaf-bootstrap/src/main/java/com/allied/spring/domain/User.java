@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -31,7 +32,11 @@ public class User {
     private String password;
 
     private boolean enabled;
-
+    
+    
+    @Column(name="logintime")
+    private Date loginDateTime;
+    
     @JsonBackReference
     @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable(name = "users_roles",
@@ -42,13 +47,14 @@ public class User {
     public User() {
     }
 
-    public User(String name, String surname, String username, String email, String password, boolean enabled) {
+    public User(String name, String surname, String username, String email, String password, boolean enabled,Date date) {
         this.name = name;
         this.surname = surname;
         this.username = username;
         this.email = email;
         this.password = password;
         this.enabled = enabled;
+        this.loginDateTime=loginDateTime;
     }
 
     public User(String name, String surname, String username, String email,
@@ -125,4 +131,14 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
+
+	public Date getLoginDateTime() {
+		return loginDateTime;
+	}
+
+	public void setLoginDateTime(Date loginDateTime) {
+		this.loginDateTime = loginDateTime;
+	}
+    
+    
 }

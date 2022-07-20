@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class TestController {
 	
+	/*
+	 * @GetMapping public String indexPage() {
+	 * System.out.println("hitting test controller to page"); return
+	 * "website/index"; }
+	 */
+	
 	@GetMapping(value = { "/", "/test" })
 	public String test() {
 		return "website/test";
