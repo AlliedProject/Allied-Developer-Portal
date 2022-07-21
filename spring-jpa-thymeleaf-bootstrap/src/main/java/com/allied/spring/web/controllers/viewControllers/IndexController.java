@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.request.WebRequest;
 
 import com.allied.spring.web.dto.UserDto;
@@ -13,20 +14,20 @@ import com.allied.spring.web.dto.UserDto;
  */
 
 @Controller
-@RequestMapping("/")
+@RequestMapping
 public class IndexController {
 	
-	  @GetMapping
-	  public String indexTo() {
-		  System.out.println("hitting default controller-------------------");
-		  return "website/index";
-		  
-	  }
+	/*
+	 * @GetMapping("/") public String indexTo() {
+	 * System.out.println("hitting default controller-------------------"); return
+	 * "index";
+	 * 
+	 * }
+	 */
 	 
 	  
-	
-    @GetMapping(value="/index")
-    public String index (){
+	@GetMapping("/index")
+    public String index(){
         return "website/index";
     }
 
