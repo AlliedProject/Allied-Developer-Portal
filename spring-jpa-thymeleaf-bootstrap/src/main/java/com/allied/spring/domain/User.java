@@ -47,7 +47,7 @@ public class User {
     public User() {
     }
 
-    public User(String name, String surname, String username, String email, String password, boolean enabled,Date date) {
+    public User(String name, String surname, String username, String email, String password, boolean enabled,Date loginDateTime) {
         this.name = name;
         this.surname = surname;
         this.username = username;
