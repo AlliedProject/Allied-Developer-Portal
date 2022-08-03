@@ -27,6 +27,17 @@ public class TestController {
 	}
 	
 	
+	@GetMapping(value = { "/", "/AdminIndexPage" })
+	public String AdminIndexPage() {
+		return "website/AdminIndexPage";
+	}
+	
+	@GetMapping(value = { "/", "/UserManagement" })
+	public String UserManagement() {
+		return "website/UserManagement";
+	}
+	
+	
 	@GetMapping(value = { "/", "/sideMenu" })
 	public String sideMenu() {
 		return "website/sideMenu";
